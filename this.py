@@ -2,7 +2,7 @@ import geopandas as gpd
 from shapely.geometry import Point
 import json
 
-def calculate_distance(city1, city2, cities_df):
+def calculate_distance(city1: str , city2: str, cities_df: gpd.GeoDataFrame) -> float:
     point1 = cities_df.loc[cities_df['city'] == city1]['geometry'].values[0]
     point2 = cities_df.loc[cities_df['city'] == city2]['geometry'].values[0]
     return point1.distance(point2)
