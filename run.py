@@ -154,6 +154,7 @@ class geodata:
         #print(point1, point10)
         geod = Geod(ellps='WGS84')
         dist_km = geod.inv(point1.y, point1.x, point2.y, point2.x)[2]
+        #
         print(dist_km/1000)
         #print(point1.distance(point2))
         
